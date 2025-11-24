@@ -1,49 +1,59 @@
-def pedir_operacion():
+def get_operation():
     while True:
-        operacion = input("Elige una operación (+, -, *, /): ")
-        if operacion in ['+', '-', '*', '/']:
-            return operacion
+        operation = input("Choose an operation (+, -, *, /): ")
+        if operation in ['+', '-', '*', '/']:
+            return operation
         else:
-            print('Operación no Valida')
+            print("Invalid operation")
             continue
 
 
-def pedir_numero(mensaje):
+def get_number(message):
     while True:
         try:
-            numero=float(input(mensaje))
-            return numero
+            number = float(input(message))
+            return number
         except ValueError:
-            print('Escribe un Valor valido')
+            print("Please enter a valid number.")
 
 
-def Calculadora():
+def calculator():
     while True:
-        num1=pedir_numero('Escoge el primero Numero: ')
-        operacion=pedir_operacion()
-        num2=pedir_numero('Escoge el segundo Numero: ')
+        num1 = get_number("Enter the first number: ")
+        operation = get_operation()
+        num2 = get_number("Enter the second number: ")
 
         try:
-            if operacion == '+':
-                resultado=num1+num2
+            if operation == '+':
+                result = num1 + num2
 
-            elif operacion == '-':
-                resultado=num1-num2
+            elif operation == '-':
+                result = num1 - num2
 
-            elif operacion == '*':
-                resultado=num1*num2
+            elif operation == '*':
+                result = num1 * num2
 
-            elif operacion == '/':
-                resultado=num1/num2
+            elif operation == '/':
+                result = num1 / num2
 
-            print('El resultado es ', resultado)
+            print("The result is:", result)
             break
+
         except ZeroDivisionError:
-            print('Error: no se puede dividir entre 0')
+            print("Error: cannot divide by 0.")
             continue
 
 
-Calculadora()
+calculator()
+
+
+        
+    
+           
+    
+
+    
+        
 
 
         
