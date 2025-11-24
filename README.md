@@ -41,4 +41,16 @@ This project helped me understand the foundations of real programming logic.
   Main function that runs the program, handles errors, and performs the operation.
 
 
+  ---
+  
+##  Future Improvements
+- Add more operations (exponent, square root, modulus)
+- Allow multiple calculations without restarting the program
+- Add a menu system
+- Add color to console output
+- Improve input validation
+- Create a GUI version using Tkinter
+- Convert this calculator into a small web app using Flask or FastAPI
+- Add automated tests (unittest)
+
 
